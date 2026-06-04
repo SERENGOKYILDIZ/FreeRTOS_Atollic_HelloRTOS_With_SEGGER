@@ -678,7 +678,6 @@ extern uint32_t SystemCoreClock;
 
 
 
-
 ////  I added those as SEG
 
 // For Interrupts
@@ -695,6 +694,12 @@ extern uint32_t SystemCoreClock;
 #define configMAX_SYSCALL_INTERRUPT_PRIORITY    ( configLIBRARY_MAX_SYSCALL_INTERRUPT_PRIORITY << 4 )
 
 ////
+
+/// for SEGGER
+
+#include "SEGGER_SYSVIEW_FreeRTOS.h"
+
+///
 
 
 
