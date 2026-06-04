@@ -1,0 +1,30 @@
+# --- Build Outputs ---
+[Dd]ebug/
+[Rr]elease/
+*.o
+*.d
+*.su
+*.elf
+*.map
+*.hex
+*.bin
+*.list
+
+# --- IDE / Eclipse Settings ---
+.metadata/
+.recommenders/
+*.launch
+*.tmp
+*.bak
+*.sql
+*.log
+
+# Eclipse user settings that shouldn't be shared
+.settings/org.eclipse.cdt.codan.core.prefs
+.settings/org.eclipse.cdt.core.prefs
+.settings/org.eclipse.cdt.ui.prefs
+
+# --- OS & System Files ---
+.DS_Store
+Thumbs.db
+desktop.ini
