@@ -61,6 +61,10 @@ Additional information:
 #define SEGGER_SYSVIEW_GET_TIMESTAMP()      (*(volatile U32 *)(0xE0001004))
 #define SEGGER_SYSVIEW_GET_INTERRUPT_ID()   ((*(volatile U32 *)(0xE000ED04)) & 0x1FF)
 
+////  I added those as SEG
+////
+#define SEGGER_SYSVIEW_RTT_BUFFER_SIZE      1024 * 8 					// 8 KB
+///
 
 #endif  // SEGGER_SYSVIEW_CONF_H
 

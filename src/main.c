@@ -7,6 +7,8 @@
 #include "FreeRTOS.h"
 #include "task.h"
 
+#include "SEGGER_SYSVIEW.h" // for SEGGER
+
 // For printf
 /*
 int _write(int32_t file, uint8_t *ptr, int32_t len)
@@ -41,6 +43,15 @@ int main(void)
 	// Note: We should change 'configCPU_CLOCK_HZ', It'll be 16MHz in 'FreeRTOSConfig.h'
 
 	SystemCoreClockUpdate(); //-> It can do for changing the variable of 'SystemCoreClock' (So it'll be 16Mhz)
+
+	// --- Launching SEGGER SystemView  ---//
+	// 1. Enable DWT (Time Stamp Counter) (so that it can run without the debugger)
+	DWT->CTRL |= (1 << 0); // Control Register is set
+
+	// 2. Launch SystemView
+	SEGGER_SYSVIEW_Conf();
+	SEGGER_SYSVIEW_Start();
+	// ------------------------------------------
 
 	Setup();
 
